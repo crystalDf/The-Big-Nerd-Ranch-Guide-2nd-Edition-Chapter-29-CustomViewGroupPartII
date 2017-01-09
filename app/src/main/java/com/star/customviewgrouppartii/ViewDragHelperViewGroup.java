@@ -108,4 +108,5 @@ public class ViewDragHelperViewGroup extends LinearLayout {
         mAutoBackView = getChildAt(1);
         mEdgeTrackerView = getChildAt(2);
     }
+
 }

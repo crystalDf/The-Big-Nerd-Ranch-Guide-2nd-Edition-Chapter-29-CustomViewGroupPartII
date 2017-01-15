@@ -75,11 +75,13 @@ public class ViewDragHelperViewGroup extends LinearLayout {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
+
         return mViewDragHelper.shouldInterceptTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+
         mViewDragHelper.processTouchEvent(event);
 
         return true;
@@ -87,6 +89,7 @@ public class ViewDragHelperViewGroup extends LinearLayout {
 
     @Override
     public void computeScroll() {
+
         if (mViewDragHelper.continueSettling(true)) {
             invalidate();
         }

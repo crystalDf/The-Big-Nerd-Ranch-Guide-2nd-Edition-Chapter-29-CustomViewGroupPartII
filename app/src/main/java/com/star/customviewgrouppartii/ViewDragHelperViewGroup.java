@@ -38,6 +38,7 @@ public class ViewDragHelperViewGroup extends LinearLayout {
 
             @Override
             public int clampViewPositionHorizontal(View child, int left, int dx) {
+
                 int leftBound = getPaddingLeft();
                 int rightBound = getMeasuredWidth() - getPaddingRight() - child.getWidth();
 
@@ -46,6 +47,7 @@ public class ViewDragHelperViewGroup extends LinearLayout {
 
             @Override
             public int clampViewPositionVertical(View child, int top, int dy) {
+
                 int topBound = getPaddingTop();
                 int bottomBound = getMeasuredHeight() - getPaddingBottom() - child.getHeight();
 
@@ -54,6 +56,7 @@ public class ViewDragHelperViewGroup extends LinearLayout {
 
             @Override
             public void onViewReleased(View releasedChild, float xvel, float yvel) {
+
                 if (releasedChild == mAutoBackView) {
                     mViewDragHelper.settleCapturedViewAt(
                             (int) mAutoBackOriginalPosition.x,
